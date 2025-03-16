@@ -10,7 +10,7 @@ try:
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         raise ValueError(
-            "GOOGLE_API_KEY environment variable is not set. Please set it before running this script."
+            "GEMINI_API_KEY environment variable is not set. Please set it before running this script."
         )
     genai.configure(api_key=api_key)
     model = genai.GenerativeModel("gemini-1.5-flash")
